@@ -1,0 +1,31 @@
+//$color-primary: rgb(41, 130, 217) !default;
+$primary-background-light: #66dcd8;
+$primary-background-dark: #43cec9;
+$on-surface: #d94e2b;
+$primary-blue-grey: #142b43;
+$primary-white: #ffffff;
+
+@mixin yellow-gradient-box {
+  box-shadow: 0 2px 6px 0 rgba(232, 218, 102, 0.5), inset 0 -1px 6px 0 #f2e55b;
+  background-image: linear-gradient(to bottom, #fce058, #ffab00);
+}
+
+@mixin green-gradient-box {
+  box-shadow: 0 2px 6px 0 rgba(102, 232, 143, 0.5), inset 0 -1px 6px 0 #5bf26e;
+  background-image: linear-gradient(to bottom, #65fc58, #15b34e);
+}
+
+@mixin light-blue-gradient-box {
+  box-shadow: 0 2px 6px 0 rgba(102, 212, 232, 0.5), inset 0 -1px 6px 0 #5bdaf2;
+  background-image: linear-gradient(to bottom, #58b0fc, #00bbd9);
+}
+
+@mixin blue-gradient-box {
+  box-shadow: 0 2px 6px 0 rgba(102, 143, 232, 0.5), inset 0 -1px 6px 0 #5b8af2;
+  background-image: linear-gradient(to bottom, #58b0fc, $primary-blue);
+}
+
+@mixin pink-gradient-box {
+  box-shadow: 0 2px 6px 0 rgba(219, 102, 232, 0.5), inset 0 -1px 6px 0 #ed5bf2;
+  background-image: linear-gradient(to bottom, #cc58fc, #6554c0);
+}

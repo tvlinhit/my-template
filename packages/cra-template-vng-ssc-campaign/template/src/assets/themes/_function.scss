@@ -1,0 +1,28 @@
+$html-font-default: 16 !default;
+
+@function strip-unit($number) {
+    @if type-of($number)=="number"and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function toRem($pixels, $htmlFont: $html-font-default) {
+    $unit: unit($pixels);
+
+    @if ($unit=="") {
+        @return ($pixels / $htmlFont) * 1rem;
+    }
+
+    @if ($unit=="px") {
+        $pixels: strip-unit($pixels);
+        @return ($pixels / $htmlFont) * 1rem;
+    }
+
+    @if ($unit=="em"or $unit=="rem"or $unit=="vw"or $unit=="vh"or $unit=="%") {
+        @return $pixels;
+    }
+
+    @error "Pixels: `#{$pixels}`, `#{$unit}`";
+}
