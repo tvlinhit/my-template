@@ -1,5 +1,5 @@
-const apiMocker = require('connect-api-mocker'),
-  { overrideDevServer } = require('customize-cra');
+const apiMocker = require('connect-api-mocker');
+const { overrideDevServer } = require('customize-cra');
 
 const devServerConfig = () => (config) => {
   return {

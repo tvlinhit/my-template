@@ -1,11 +1,11 @@
-import create, { GetState, SetState } from 'zustand';
+import create, { SetState } from 'zustand';
 
 type AppLoadingState = {
   isLoading: boolean;
   setLoading: (value: boolean) => void;
 };
 
-const useAppLoading = create<AppLoadingState>((set: SetState<AppLoadingState>, get: GetState<AppLoadingState>) => ({
+const useAppLoading = create<AppLoadingState>((set: SetState<AppLoadingState>) => ({
   isLoading: false,
   setLoading: (value: boolean): void => {
     set({ isLoading: value });

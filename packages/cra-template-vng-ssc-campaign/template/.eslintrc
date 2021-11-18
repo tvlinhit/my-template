@@ -9,6 +9,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["config-overrides.js"],
   "extends": [
     "airbnb-base",
     "airbnb-typescript",
